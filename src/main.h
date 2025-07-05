@@ -1744,9 +1744,9 @@ public:
     {
         CBigNum bnTarget;
         bnTarget.SetCompact(nBits);
-        if (bnTarget <= 0)
+        if (BN_is_negative(&bnTarget) || BN_is_zero(&bnTarget))
             return 0;
-        return (CBigNum(1)<<256) / (bnTarget+1);
+        return (CBigNum(1)<<256) / (bnTarget + CBigNum(1));
     }
 
     bool IsInMainChain() const

@@ -272,10 +272,10 @@ class CBitcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 45, // Kricoin addresses start with L
-        SCRIPT_ADDRESS = 45,
-        PUBKEY_ADDRESS_TEST = 45,
-        SCRIPT_ADDRESS_TEST = 45,
+        PUBKEY_ADDRESS = 45, // Kricoin addresses start with 'K'
+        SCRIPT_ADDRESS = 48,
+        PUBKEY_ADDRESS_TEST = 111,
+        SCRIPT_ADDRESS_TEST = 196,
     };
 
     bool Set(const CKeyID &id) {
